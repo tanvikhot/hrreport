@@ -1,0 +1,130 @@
+-<DOCTYPE! html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+<style>
+
+  body {
+    background-color: lightblue;
+    font-family: "Montserrat", sans-serif;
+    }
+}
+#button {
+    width: 6em;
+    border: 2px solid green;
+    background: #ffe;
+    border-radius: 5px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+a:hover {
+    color: black;
+    background: #eff;
+}
+h1 {
+  font-weight: 900;
+  color: #eff;
+  font-size: 60px;
+}
+h2 {
+  font-weight: 600;
+}
+</style>
+<script>
+
+    $(function() {
+      $('#list1').typeahead({
+              source: [
+                  { id: 1, name: 'Alex Smith' },
+                  { id: 2, name: 'John Doe' },
+                  { id: 3, name: 'Emma Watson' },
+                  { id: 4, name: 'George Seo' },
+                  { id: 5, name: 'Christy Lee' }
+              ]
+          });
+          $('#list2').typeahead({
+                  source: [
+                      { id: 1, name: 'Doe' },
+                      { id: 2, name: 'Smith' },
+                      { id: 3, name: 'Watson' },
+                      { id: 4, name: 'Sara' },
+                      { id: 5, name: 'Stevens' }
+                  ]
+              });
+              $('#list3').typeahead({
+                      source: [
+                          { id: 1, name: 'Alexis' },
+                          { id: 2, name: 'Jess' },
+                          { id: 3, name: 'Taylor' },
+                          { id: 4, name: 'Fred' },
+                          { id: 5, name: 'Smith' }
+                      ]
+                  });
+      $('.typeahead').typeahead();
+    });
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-4">
+<h1>HR Wells</h1>
+<h2><u>creating a safer workspace.</u></h2>
+
+<form action="report.html">
+<div class="dropdown">
+  <div id="myDropdown1" class="dropdown-content">
+    <h4>Engineering</h4>
+    <input name="eng" autocomplete="false" type="text" data-provide="typeahead" class="typeahead" placeholder="Search Engineering.." id="list1">
+    <button role="submit" class="btn btn-primary">Report</button>
+  </div>
+  <hr/>
+  <div id="myDropdown1" class="dropdown-content">
+    <h4>Sales</h4>
+    <input type="text" name="sales" data-provide="typeahead" class="typeahead" placeholder="Search Sales.." id="list2">
+    <button role="submit" class="btn btn-primary">Report</button>
+  </div>
+  <hr/>
+  <div id="myDropdown1" class="dropdown-content">
+    <h4>Marketing</h4>
+    <input type="text" name="mktg" data-provide="typeahead" class="typeahead" placeholder="Search Marketing.." id="list3">
+    <button role="submit" class="btn btn-primary">Report</button>
+  </div>
+</div>
+</form>
+</div>
+
+<!--
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">HR</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction(this, 2)">
+    <a href="#johnd"><div id="Alexis"><a href="Alexis.html">Alexis</a></div></a>
+    <a href="#alexs"><div id="Jess"><a href="Jess.html">Jess</a></div></a>
+    <a href="#emmaw"><div id="Taylor"><a href="Taylor.html">Taylor</a></div></a>
+    <a href="#georges"><div id="Fred"><a href="Fred.html">Fred</a></div></a>
+    <a href="#christyl"><div id="Chris"><a href="Chris.html">Chris</a></div></a>
+  </div>
+</div>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Marketing</button>
+  <div id="myDropdown3" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction(this, 3)">
+    <a href="#johnd"><div id="Doe"><a href="Doe.html">Doe</a></div></a>
+    <a href="#alexs"><div id="Smith"><a href="Smith.html">Smith</a></div></a>
+    <a href="#emmaw"><div id="Watson"><a href="Watson.html">Watson</a></div></a>
+    <a href="#georges"><div id="Sara"><a href="Sara.html">Sara</a></div></a>
+    <a href="#christyl"><div id="Lee"><a href="Lee.html">Lee</a></div></a>
+  </div>
+</div>
+-->
+</body>
+</html>

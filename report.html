@@ -1,0 +1,68 @@
+-<DOCTYPE! html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+<style>
+
+  body {
+    background-color: lightblue;
+    font-family: "Montserrat", sans-serif;
+    }
+}
+#button {
+    width: 6em;
+    border: 2px solid green;
+    background: #ffe;
+    border-radius: 5px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+a:hover {
+    color: black;
+    background: #eff;
+}
+h1 {
+  font-weight: 900;
+  color: #eff;
+  font-size: 60px;
+}
+h2 {
+  font-weight: 600;
+}
+</style>
+<script>
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+    $(function() {
+      var eng = getParameterByName("eng");
+      $("#name").html("Reporting "+ eng);
+    });
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-4">
+<h1>HR Wells</h1>
+<h2 id="name"></h2>
+<textarea rows="8" cols="40"></textarea>
+<br/>
+<button>Submit</button>
+</body>
+</html>
